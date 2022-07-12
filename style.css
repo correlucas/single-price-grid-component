@@ -5,7 +5,7 @@
   padding: 0;
   text-decoration: 0;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -70,39 +70,41 @@ body {
 
 /* typography */
 
-h1 {
+h1,
+h1 span {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: -0.3px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.0187rem;
   color: var(--cyan-1);
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 }
 
-h2 {
+h2,
+h2 span {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: -0.225px;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.0141rem;
   color: var(--green);
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
 }
 
 h3 {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: -0.225px;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.0141rem;
   color: var(--white);
-  padding-bottom: 18px;
+  padding-bottom: 1.125rem;
 }
 
 p,
 .box-2 p {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: -0.2px;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.0125rem;
 }
 
 p {
@@ -111,41 +113,52 @@ p {
 
 .box-2 p {
   color: var(--white);
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
+}
+
+.line-over {
+  text-transform: uppercase;
+  color: rgb(69, 103, 255);
+  text-decoration: line-through;
+}
+
+strong {
+  font-weight: 700;
+  color: rgb(69, 103, 255);
 }
 
 .price {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 37px;
-  letter-spacing: -0.4px;
+  font-size: 2rem;
+  line-height: 2.3125rem;
+  letter-spacing: -0.025rem;
   color: var(--white);
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem;
 }
 
 span {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: -0.2px;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -0.0125rem;
   color: var(--light-gray);
 }
 
 li,
 ul span {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.175px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.0109rem;
   color: var(--white);
 }
 
 ul span {
   opacity: 75%;
-  padding-left: 4px;
+  padding-left: 0.25rem;
 }
 
 ul span:hover {
@@ -159,9 +172,9 @@ ul span:hover {
 .container-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 635px;
-  box-shadow: 0px 15px 30px rgba(0, 81, 171, 0.148847);
-  margin: 40px 32px;
+  max-width: 39.6875rem;
+  box-shadow: 0rem 0.9375rem 1.875rem rgba(0, 81, 171, 0.148847);
+  margin: 2.5rem 2rem;
 }
 
 .container-2 {
@@ -175,17 +188,17 @@ ul span:hover {
 
 .btn,
 .btn-2 {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: -0.2px;
-  padding: 15px 32px;
-  border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: -0.0125rem;
+  padding: 0.9375rem 2rem;
+  border-radius: 0.3125rem;
   background-color: var(--green);
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
-  border: 1px solid var(--green);
+  box-shadow: 0rem 0.625rem 0.625rem rgba(0, 0, 0, 0.0973011);
+  border: 0.0625rem solid var(--green);
   transition: ease 0.3s;
   width: 100%;
 }
@@ -193,7 +206,7 @@ ul span:hover {
 .btn:hover,
 .btn-2:hover {
   background-color: hsla(71, 73%, 54%, 0.01);
-  border: 1px solid var(--green);
+  border: 0.0625rem solid var(--green);
   transition: ease 0.3s;
 }
 
@@ -204,26 +217,28 @@ a {
 .box-1 {
   background-color: var(--white);
   grid-column: span 2;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .box-2 {
   background-color: var(--cyan-1);
-  border-radius: 0 0 0 8px;
+  border-radius: 0 0 0 0.5rem;
 }
 
 .box-3 {
   background-color: var(--cyan-2);
-  border-radius: 0 0 8px 0;
+  border-radius: 0 0 0.5rem 0;
 }
 
 .box-1,
 .box-2,
 .box-3 {
-  padding: 40px;
+  padding: 2.5rem;
 }
 
-@media (max-width: 620px) {
+/* mobile */
+
+@media (max-width: 38.75rem) {
 
   .container,
   .container-2 {
@@ -231,13 +246,13 @@ a {
   }
 
   .box-2 p {
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
   }
 
   .box-1,
   .box-2,
   .box-3 {
-    padding: 32px 24px;
+    padding: 2rem 1.5rem;
   }
 
   .box-1 {
@@ -245,10 +260,20 @@ a {
   }
 
   .box-2 {
-    border-radius: 0px;
+    border-radius: 0rem;
   }
 
   .box-3 {
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 18.75rem) {
+
+  .btn,
+  .btn-2 {
+    display: flex;
+    font-size: 12.8px;
+    padding: 0.5rem 0.75rem;
   }
 }
